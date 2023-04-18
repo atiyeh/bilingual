@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#eng">English</a>
+    <a href="#es">Espaniol</a>
+    <p id="hi">welcome everyone</p>
+    <script>
+      var dataReload = document.querySelectorAll("[data-reload]");
+      var language = {
+        eng: {
+          welcome: "welcome everyone",
+        },
+        es: {
+          welcome: "esperso everyone",
+        },
+      };
+      if (window.location.hash) {
+        if (window.location.hash === "#es") {
+          hi.textContent = language.es.welcome;
+        }
+      }
+      for (i = 0; i <= dataReload.length; i++) {
+        dataReload[i].onclick = Function () {
+          location.reload(true);
+        };
+      }
+    </script>
+  </body>
+</html>
